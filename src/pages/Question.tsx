@@ -4,6 +4,7 @@ import { useQuiz } from "@/contexts/QuizContext";
 import { questions, getRomanNumeral } from "@/data/questions";
 import nepalFlagRatio from "@/assets/nepal-flag-ratio.png";
 import switzerlandFlag from "@/assets/switzerland-flag.png";
+import newzealandFlag from "@/assets/newzealand-flag.png";
 import { AvatarScore } from "@/components/AvatarScore";
 
 const Question = () => {
@@ -26,6 +27,16 @@ const Question = () => {
               src={switzerlandFlag} 
               alt="Switzerland Flag" 
               className="w-48 md:w-64 h-auto"
+            />
+          </div>
+        )}
+        
+        {quizState.currentQuestionIndex >= 3 && quizState.currentQuestionIndex <= 4 && (
+          <div className="absolute -left-8 md:-left-16 -top-8 z-10">
+            <img 
+              src={newzealandFlag} 
+              alt="New Zealand Flag" 
+              className="w-56 md:w-72 h-auto"
             />
           </div>
         )}
