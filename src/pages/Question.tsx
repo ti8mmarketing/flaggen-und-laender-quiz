@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useQuiz } from "@/contexts/QuizContext";
 import { questions, getRomanNumeral } from "@/data/questions";
 import nepalFlagRatio from "@/assets/nepal-flag-ratio.png";
+import switzerlandFlag from "@/assets/switzerland-flag.png";
 import { AvatarScore } from "@/components/AvatarScore";
 
 const Question = () => {
@@ -19,6 +20,16 @@ const Question = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4 py-8">
       <AvatarScore />
       <div className="w-full max-w-2xl space-y-8">
+        {quizState.currentQuestionIndex >= 0 && quizState.currentQuestionIndex <= 2 && (
+          <div className="flex justify-center">
+            <img 
+              src={switzerlandFlag} 
+              alt="Switzerland Flag" 
+              className="w-32 h-auto"
+            />
+          </div>
+        )}
+        
         <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">
           Frage {getRomanNumeral(quizState.currentQuestionIndex)}
         </h2>
