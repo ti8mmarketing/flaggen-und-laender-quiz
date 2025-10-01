@@ -6,7 +6,7 @@ import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.jpg";
-import avatar5 from "@/assets/avatar-5.jpg";
+import avatar5 from "@/assets/avatar-5.png";
 import avatar6 from "@/assets/avatar-6.jpg";
 import avatar7 from "@/assets/avatar-7.jpg";
 import avatar8 from "@/assets/avatar-8.jpg";
@@ -29,7 +29,7 @@ const avatarNames = [
   "Avatar 2",
   "The Rock",
   "Sneaky Golem",
-  "Avatar 5",
+  "Roger Dittli",
   "Avatar 6",
   "Avatar 7",
   "Avatar 8",
@@ -62,23 +62,26 @@ const AvatarSelection = () => {
         </h1>
 
         <div className="grid grid-cols-3 gap-4 md:gap-6">
-          {avatars.map((avatar, index) => (
-            <button
-              key={index}
-              onClick={() => handleAvatarSelect(index)}
-              className={`aspect-square rounded-lg overflow-hidden transition-all ${
-                selectedIndex === index
-                  ? "ring-4 ring-primary scale-105"
-                  : "ring-2 ring-border hover:ring-primary/50"
-              }`}
-            >
-              <img
-                src={avatar}
-                alt={avatarNames[index]}
-                className="w-full h-full object-cover"
-              />
-            </button>
-          ))}
+          {avatars.map((avatar, index) => {
+            const needsBackground = index === 2 || index === 4; // The Rock and Roger Dittli
+            return (
+              <button
+                key={index}
+                onClick={() => handleAvatarSelect(index)}
+                className={`aspect-square rounded-lg overflow-hidden transition-all ${
+                  selectedIndex === index
+                    ? "ring-4 ring-primary scale-105"
+                    : "ring-2 ring-border hover:ring-primary/50"
+                } ${needsBackground ? "bg-card" : ""}`}
+              >
+                <img
+                  src={avatar}
+                  alt={avatarNames[index]}
+                  className="w-full h-full object-cover"
+                />
+              </button>
+            );
+          })}
         </div>
 
         {selectedIndex !== null && (

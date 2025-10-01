@@ -6,7 +6,7 @@ import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.jpg";
-import avatar5 from "@/assets/avatar-5.jpg";
+import avatar5 from "@/assets/avatar-5.png";
 import avatar6 from "@/assets/avatar-6.jpg";
 import avatar7 from "@/assets/avatar-7.jpg";
 import avatar8 from "@/assets/avatar-8.jpg";
@@ -46,7 +46,7 @@ const Results = () => {
 
         {quizState.selectedAvatar !== null && (
           <div className="flex justify-center">
-            <div className="w-32 h-32 rounded-lg overflow-hidden ring-4 ring-primary">
+            <div className="w-32 h-32 rounded-lg overflow-hidden ring-4 ring-primary bg-card">
               <img
                 src={avatars[quizState.selectedAvatar]}
                 alt="Your Avatar"
