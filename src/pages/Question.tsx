@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useQuiz } from "@/contexts/QuizContext";
 import { questions, getRomanNumeral } from "@/data/questions";
+import nepalFlagRatio from "@/assets/nepal-flag-ratio.png";
 
 const Question = () => {
   const navigate = useNavigate();
@@ -37,6 +38,16 @@ const Question = () => {
               </Button>
             ))}
           </div>
+
+          {currentQuestion.id === 6 && (
+            <div className="mt-6 flex justify-center">
+              <img 
+                src={nepalFlagRatio} 
+                alt="Nepal Flag Ratio Formulas" 
+                className="max-w-full h-auto rounded-lg"
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
