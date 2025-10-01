@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import newzealandImage from "@/assets/newzealand-intro.jpg";
+import newzealandImage from "@/assets/newzealand-intro-new.jpg";
 import nepalImage from "@/assets/nepal-intro.jpg";
 import guamImage from "@/assets/guam-intro.jpg";
 
