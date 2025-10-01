@@ -24,6 +24,18 @@ const avatars = [
   avatar9,
 ];
 
+const avatarNames = [
+  "Avatar 1",
+  "Avatar 2",
+  "Avatar 3",
+  "Sneaky Golem",
+  "Avatar 5",
+  "Avatar 6",
+  "Avatar 7",
+  "Avatar 8",
+  "Avatar 9",
+];
+
 const AvatarSelection = () => {
   const navigate = useNavigate();
   const { setSelectedAvatar, quizState } = useQuiz();
@@ -62,7 +74,7 @@ const AvatarSelection = () => {
             >
               <img
                 src={avatar}
-                alt={`Avatar ${index + 1}`}
+                alt={avatarNames[index]}
                 className="w-full h-full object-cover"
               />
             </button>
@@ -71,7 +83,7 @@ const AvatarSelection = () => {
 
         {selectedIndex !== null && (
           <p className="text-center text-lg text-primary font-medium">
-            Avatar {selectedIndex + 1} ausgewählt
+            {avatarNames[selectedIndex]} ausgewählt
           </p>
         )}
 
