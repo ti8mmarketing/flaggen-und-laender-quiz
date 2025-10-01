@@ -19,13 +19,13 @@ const Question = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4 py-8">
       <AvatarScore />
-      <div className="w-full max-w-2xl space-y-8">
+      <div className="w-full max-w-2xl space-y-8 relative">
         {quizState.currentQuestionIndex >= 0 && quizState.currentQuestionIndex <= 2 && (
-          <div className="flex justify-center">
+          <div className="absolute -right-8 md:-right-16 top-0 z-10">
             <img 
               src={switzerlandFlag} 
               alt="Switzerland Flag" 
-              className="w-32 h-auto"
+              className="w-48 md:w-64 h-auto"
             />
           </div>
         )}
