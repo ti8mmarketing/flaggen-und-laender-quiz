@@ -63,7 +63,7 @@ const AvatarSelection = () => {
 
         <div className="grid grid-cols-3 gap-4 md:gap-6">
           {avatars.map((avatar, index) => {
-            const needsBackground = index === 0 || index === 1 || index === 2 || index === 4 || index === 5; // Basti GHG, Ralf Schumacher, The Rock, Roger Dittli, and Globi
+            const needsBackground = index === 0 || index === 1 || index === 2 || index === 4 || index === 5 || index === 7 || index === 8 || index === 9; // Basti GHG, Ralf Schumacher, The Rock, Roger Dittli, Globi, Max Verstappen, Peppa Pig, and Hog Rider
             return (
               <button
                 key={index}

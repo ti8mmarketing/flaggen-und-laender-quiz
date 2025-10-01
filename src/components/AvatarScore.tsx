@@ -28,12 +28,18 @@ export const AvatarScore = () => {
     return null;
   }
 
+  const needsBackground = quizState.selectedAvatar !== null && 
+    (quizState.selectedAvatar === 0 || quizState.selectedAvatar === 1 || 
+     quizState.selectedAvatar === 2 || quizState.selectedAvatar === 4 || 
+     quizState.selectedAvatar === 5 || quizState.selectedAvatar === 7 || 
+     quizState.selectedAvatar === 8 || quizState.selectedAvatar === 9);
+
   return (
     <div className="fixed top-4 right-4 z-50 flex flex-col items-center gap-2">
       <div className="bg-card/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
         <p className="text-lg font-bold text-primary">Score: {quizState.score}</p>
       </div>
-      <div className="w-16 h-16 rounded-lg overflow-hidden ring-2 ring-primary shadow-lg bg-card">
+      <div className={`w-16 h-16 rounded-lg overflow-hidden ring-2 ring-primary shadow-lg ${needsBackground ? 'bg-card' : ''}`}>
         <img
           src={avatars[quizState.selectedAvatar]}
           alt="Your Avatar"
