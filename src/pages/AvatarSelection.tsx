@@ -7,7 +7,7 @@ import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.jpg";
 import avatar5 from "@/assets/avatar-5.png";
-import avatar6 from "@/assets/avatar-6.jpg";
+import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.jpg";
 import avatar8 from "@/assets/avatar-8.jpg";
 import avatar9 from "@/assets/avatar-9.jpg";
@@ -30,7 +30,7 @@ const avatarNames = [
   "The Rock",
   "Sneaky Golem",
   "Roger Dittli",
-  "Avatar 6",
+  "Globi",
   "Avatar 7",
   "Avatar 8",
   "Avatar 9",
@@ -63,7 +63,7 @@ const AvatarSelection = () => {
 
         <div className="grid grid-cols-3 gap-4 md:gap-6">
           {avatars.map((avatar, index) => {
-            const needsBackground = index === 2 || index === 4; // The Rock and Roger Dittli
+            const needsBackground = index === 2 || index === 4 || index === 5; // The Rock, Roger Dittli, and Globi
             return (
               <button
                 key={index}
