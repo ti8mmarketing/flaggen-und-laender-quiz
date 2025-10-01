@@ -21,7 +21,7 @@ export const questions: Question[] = [
     country: "Schweiz",
     question: "Welches ist der grösste Berg der komplett in der Schweiz liegt?",
     options: ["Matterhorn", "Dufourspitze", "Dom", "Finsteraarhorn"],
-    correctAnswer: 3,
+    correctAnswer: 1,
   },
   {
     id: 2,
