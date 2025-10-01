@@ -34,6 +34,9 @@ const Feedback = () => {
       "Du bist ein Profi darin.",
       "Du hast richtig Ahnung.",
       "Wehe du hast geraten!",
+      "Super gemacht – weiter so!",
+      "Spitze! Das hast du richtig gut hinbekommen.",
+      "Perfekt erledigt – stolz auf dich!",
     ];
     return messages[currentQuestion.id];
   };
