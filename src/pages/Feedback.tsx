@@ -87,8 +87,11 @@ const Feedback = () => {
         <div className="flex justify-center pt-8">
           <Button
             size="lg"
-            variant={isCorrect ? "default" : "outline"}
-            className="w-full max-w-md text-xl py-6"
+            className={`w-full max-w-md text-xl py-6 ${
+              isCorrect 
+                ? "bg-green-800 hover:bg-green-900 text-white" 
+                : "bg-green-500 hover:bg-green-600 text-white"
+            }`}
             onClick={handleContinue}
           >
             Weiter
