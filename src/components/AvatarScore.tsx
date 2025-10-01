@@ -5,7 +5,7 @@ import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.jpg";
 import avatar5 from "@/assets/avatar-5.png";
 import avatar6 from "@/assets/avatar-6.png";
-import avatar7 from "@/assets/avatar-7.jpg";
+import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
 
