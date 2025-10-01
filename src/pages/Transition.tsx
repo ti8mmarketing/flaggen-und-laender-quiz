@@ -27,7 +27,7 @@ const Transition = () => {
   const data = destinationData[destination as keyof typeof destinationData];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background px-4 py-8">
+    <div className="min-h-screen flex flex-col bg-background px-4 py-8 pr-28">
       <AvatarScore />
       <div className="w-full max-w-3xl mx-auto space-y-6">
         <div className="space-y-6">
