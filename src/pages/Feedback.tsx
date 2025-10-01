@@ -16,6 +16,22 @@ const Feedback = () => {
   const currentQuestion = questions[quizState.currentQuestionIndex];
   const correctAnswer = currentQuestion.options[currentQuestion.correctAnswer];
 
+  const motivationalMessages = [
+    `Nächstes mal hast du es sicher richtig, es wäre ${correctAnswer} gewesen!`,
+    `Fast richtig, aber es wäre ${correctAnswer} gewesen!`,
+    `Nicht ganz, die richtige Antwort wäre ${correctAnswer} gewesen!`,
+    `Schade, es wäre ${correctAnswer} gewesen - beim nächsten Mal klappt's bestimmt!`,
+  ];
+
+  const randomMessage = motivationalMessages[Math.floor(Math.random() * motivationalMessages.length)];
+
+  const getCorrectMessage = () => {
+    if (currentQuestion.id === 6) {
+      return "Wehe du hast geraten!";
+    }
+    return "Du bist ein Ass!";
+  };
+
   useEffect(() => {
     answerQuestion(selectedAnswer, isCorrect);
   }, []);
@@ -54,16 +70,13 @@ const Feedback = () => {
           {isCorrect ? "Richtig!" : "Falsch!"}
         </h2>
 
-        {!isCorrect && (
-          <p
-            className={`text-xl md:text-2xl ${
-              isCorrect ? "text-success-foreground" : "text-error-foreground"
-            }`}
-          >
-            Die richtige Antwort wäre gewesen: <br />
-            <span className="font-bold mt-2 inline-block">{correctAnswer}</span>
-          </p>
-        )}
+        <p
+          className={`text-xl md:text-2xl ${
+            isCorrect ? "text-success-foreground" : "text-error-foreground"
+          }`}
+        >
+          {isCorrect ? getCorrectMessage() : randomMessage}
+        </p>
 
         <div className="flex justify-center pt-8">
           <Button
