@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useQuiz } from "@/contexts/QuizContext";
-import introImage from "@/assets/intro-image.jpg";
+import introImage from "@/assets/switzerland-intro.png";
 import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.jpg";
