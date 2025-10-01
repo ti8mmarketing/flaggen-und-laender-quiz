@@ -36,7 +36,7 @@ const Question = () => {
             <img 
               src={newzealandFlag} 
               alt="New Zealand Flag" 
-              className="w-56 md:w-72 h-auto"
+              className="w-72 md:w-96 h-auto"
             />
           </div>
         )}
