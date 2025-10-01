@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useQuiz } from "@/contexts/QuizContext";
 import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
-import avatar3 from "@/assets/avatar-3.jpg";
+import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.jpg";
 import avatar5 from "@/assets/avatar-5.jpg";
 import avatar6 from "@/assets/avatar-6.jpg";
@@ -27,7 +27,7 @@ const avatars = [
 const avatarNames = [
   "Avatar 1",
   "Avatar 2",
-  "Avatar 3",
+  "The Rock",
   "Sneaky Golem",
   "Avatar 5",
   "Avatar 6",
