@@ -50,12 +50,12 @@ const Question = () => {
             {currentQuestion.question}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             {currentQuestion.options.map((option, index) => (
               <Button
                 key={index}
                 size="lg"
-                className="w-full text-lg py-6 h-auto"
+                className="w-full aspect-square text-base md:text-lg py-4 h-auto flex items-center justify-center"
                 onClick={() => handleAnswer(index)}
               >
                 {option}
