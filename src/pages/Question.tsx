@@ -1,0 +1,46 @@
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { useQuiz } from "@/contexts/QuizContext";
+import { questions, getRomanNumeral } from "@/data/questions";
+
+const Question = () => {
+  const navigate = useNavigate();
+  const { quizState } = useQuiz();
+  const currentQuestion = questions[quizState.currentQuestionIndex];
+
+  const handleAnswer = (optionIndex: number) => {
+    const isCorrect = optionIndex === currentQuestion.correctAnswer;
+    navigate("/feedback", { state: { isCorrect, selectedAnswer: optionIndex } });
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4 py-8">
+      <div className="w-full max-w-2xl space-y-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">
+          Frage {getRomanNumeral(quizState.currentQuestionIndex)}
+        </h2>
+
+        <div className="bg-card rounded-lg p-6 md:p-8 shadow-lg">
+          <p className="text-xl md:text-2xl text-center mb-8 text-card-foreground">
+            {currentQuestion.question}
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {currentQuestion.options.map((option, index) => (
+              <Button
+                key={index}
+                size="lg"
+                className="w-full text-lg py-6 h-auto"
+                onClick={() => handleAnswer(index)}
+              >
+                {option}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Question;
