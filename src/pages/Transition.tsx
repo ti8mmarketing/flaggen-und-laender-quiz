@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import newzealandImage from "@/assets/newzealand-intro-new.jpg";
 import nepalImage from "@/assets/nepal-intro-new.jpg";
 import guamImage from "@/assets/guam-intro.jpg";
+import { AvatarScore } from "@/components/AvatarScore";
 
 const destinationData = {
   Neuseeland: {
@@ -27,6 +28,7 @@ const Transition = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background px-4 py-8">
+      <AvatarScore />
       <div className="w-full max-w-3xl mx-auto space-y-6">
         <div className="space-y-6">
           <div className="prose prose-lg max-w-none">

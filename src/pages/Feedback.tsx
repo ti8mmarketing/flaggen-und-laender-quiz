@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useQuiz } from "@/contexts/QuizContext";
 import { questions } from "@/data/questions";
 import { useEffect } from "react";
+import { AvatarScore } from "@/components/AvatarScore";
 
 const Feedback = () => {
   const location = useLocation();
@@ -70,6 +71,7 @@ const Feedback = () => {
         isCorrect ? "bg-success" : "bg-error"
       }`}
     >
+      <AvatarScore />
       <div className="w-full max-w-2xl space-y-8 text-center">
         <h2
           className={`text-5xl md:text-6xl font-bold ${
