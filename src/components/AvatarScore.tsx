@@ -31,9 +31,9 @@ export const AvatarScore = () => {
   return (
     <div className="fixed top-4 right-4 z-50 flex flex-col items-center gap-2">
       <div className="bg-card/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
-        <p className="text-2xl font-bold text-primary">{quizState.score}</p>
+        <p className="text-lg font-bold text-primary">Score: {quizState.score}</p>
       </div>
-      <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-primary shadow-lg">
+      <div className="w-16 h-16 rounded-lg overflow-hidden ring-2 ring-primary shadow-lg">
         <img
           src={avatars[quizState.selectedAvatar]}
           alt="Your Avatar"

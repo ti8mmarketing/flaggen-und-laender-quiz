@@ -27,7 +27,7 @@ export const questions: Question[] = [
     id: 2,
     country: "Schweiz",
     question: "Welches sind 3 traditionelle Schweizer Gerichte",
-    options: ["Rösti, Reis, Nudeln", "Rösti, Raclette, Fondue", "Frühlingsrollen, Raclette, Steak", "Lasagne, Gordon Bleu, Schogg"],
+    options: ["Rösti, Reis, Nudeln", "Rösti, Raclette, Fondue", "Frühlingsrollen, Raclette, Steak", "Lasagne, Gordon Bleu, Schoggi"],
     correctAnswer: 1,
   },
   // Neuseeland (3-4)
