@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useQuiz } from "@/contexts/QuizContext";
 import avatar1 from "@/assets/avatar-1.png";
-import avatar2 from "@/assets/avatar-2.jpg";
+import avatar2 from "@/assets/avatar-2.png";
 import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.jpg";
 import avatar5 from "@/assets/avatar-5.png";
@@ -26,7 +26,7 @@ const avatars = [
 
 const avatarNames = [
   "Basti GHG",
-  "Avatar 2",
+  "Ralf Schumacher",
   "The Rock",
   "Sneaky Golem",
   "Roger Dittli",
@@ -63,7 +63,7 @@ const AvatarSelection = () => {
 
         <div className="grid grid-cols-3 gap-4 md:gap-6">
           {avatars.map((avatar, index) => {
-            const needsBackground = index === 0 || index === 2 || index === 4 || index === 5; // Basti GHG, The Rock, Roger Dittli, and Globi
+            const needsBackground = index === 0 || index === 1 || index === 2 || index === 4 || index === 5; // Basti GHG, Ralf Schumacher, The Rock, Roger Dittli, and Globi
             return (
               <button
                 key={index}
