@@ -55,7 +55,7 @@ const Question = () => {
               <Button
                 key={index}
                 size="lg"
-                className="w-full aspect-square text-base md:text-lg py-4 h-auto flex items-center justify-center"
+                className="w-full h-24 md:h-28 text-base md:text-lg flex items-center justify-center"
                 onClick={() => handleAnswer(index)}
               >
                 {option}
