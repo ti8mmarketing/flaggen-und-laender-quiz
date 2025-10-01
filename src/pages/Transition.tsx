@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import newzealandImage from "@/assets/newzealand-intro-new.jpg";
 import nepalImage from "@/assets/nepal-intro-new.jpg";
-import guamImage from "@/assets/guam-intro.jpg";
+import guamImage from "@/assets/guam-intro-new.jpg";
 import { AvatarScore } from "@/components/AvatarScore";
 
 const destinationData = {
