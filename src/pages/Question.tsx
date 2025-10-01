@@ -22,11 +22,11 @@ const Question = () => {
       <AvatarScore />
       <div className="w-full max-w-2xl space-y-8 relative">
         {quizState.currentQuestionIndex >= 0 && quizState.currentQuestionIndex <= 2 && (
-          <div className="absolute -right-8 md:-right-16 top-0 z-10">
+          <div className="absolute -right-8 md:-right-16 top-32 z-10">
             <img 
               src={switzerlandFlag} 
               alt="Switzerland Flag" 
-              className="w-48 md:w-64 h-auto"
+              className="w-64 md:w-80 h-auto"
             />
           </div>
         )}
