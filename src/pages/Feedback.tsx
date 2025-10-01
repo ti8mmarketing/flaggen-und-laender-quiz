@@ -26,10 +26,16 @@ const Feedback = () => {
   const randomMessage = motivationalMessages[Math.floor(Math.random() * motivationalMessages.length)];
 
   const getCorrectMessage = () => {
-    if (currentQuestion.id === 6) {
-      return "Wehe du hast geraten!";
-    }
-    return "Du bist ein Ass!";
+    const messages = [
+      "Du hast richtig Ahnung.",
+      "Du bist richtig geschickt.",
+      "Du hast es drauf.",
+      "Du machst das super.",
+      "Du bist ein Profi darin.",
+      "Du hast richtig Ahnung.",
+      "Wehe du hast geraten!",
+    ];
+    return messages[currentQuestion.id];
   };
 
   useEffect(() => {
