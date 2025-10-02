@@ -63,8 +63,8 @@ const AvatarSelection = () => {
 
         <div className="grid grid-cols-3 gap-4 md:gap-6">
           {avatars.map((avatar, index) => {
-            const needsWhiteBackground = index === 6 || index === 8; // Max Verstappen and Hog Rider
-            const needsBackground = index === 0 || index === 1 || index === 2 || index === 4 || index === 5 || index === 7 || index === 9; // Others
+            const needsWhiteBackground = index === 6 || index === 7 || index === 8; // Avatar 7, 8, 9 (Max Verstappen, Peppa Pig, Hog Rider)
+            const needsBackground = index === 0 || index === 1 || index === 2 || index === 4 || index === 5 || index === 9; // Others
             return (
               <button
                 key={index}

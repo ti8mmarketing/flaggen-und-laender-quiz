@@ -28,12 +28,11 @@ export const AvatarScore = () => {
     return null;
   }
 
-  const needsWhiteBackground = quizState.selectedAvatar === 6 || quizState.selectedAvatar === 8; // Max Verstappen and Hog Rider
+  const needsWhiteBackground = quizState.selectedAvatar === 6 || quizState.selectedAvatar === 7 || quizState.selectedAvatar === 8; // Avatar 7, 8, 9
   const needsBackground = quizState.selectedAvatar !== null && 
     (quizState.selectedAvatar === 0 || quizState.selectedAvatar === 1 || 
      quizState.selectedAvatar === 2 || quizState.selectedAvatar === 4 || 
-     quizState.selectedAvatar === 5 || quizState.selectedAvatar === 7 || 
-     quizState.selectedAvatar === 9);
+     quizState.selectedAvatar === 5 || quizState.selectedAvatar === 9);
 
   return (
     <div className="fixed top-4 right-4 z-[100] flex flex-col items-center gap-2">
