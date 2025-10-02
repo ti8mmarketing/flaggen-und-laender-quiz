@@ -63,7 +63,8 @@ const AvatarSelection = () => {
 
         <div className="grid grid-cols-3 gap-4 md:gap-6">
           {avatars.map((avatar, index) => {
-            const needsBackground = index === 0 || index === 1 || index === 2 || index === 4 || index === 5 || index === 7 || index === 8 || index === 9; // Basti GHG, Ralf Schumacher, The Rock, Roger Dittli, Globi, Max Verstappen, Peppa Pig, and Hog Rider
+            const needsWhiteBackground = index === 6 || index === 8; // Max Verstappen and Hog Rider
+            const needsBackground = index === 0 || index === 1 || index === 2 || index === 4 || index === 5 || index === 7 || index === 9; // Others
             return (
               <button
                 key={index}
@@ -72,7 +73,7 @@ const AvatarSelection = () => {
                   selectedIndex === index
                     ? "ring-4 ring-primary scale-105"
                     : "ring-2 ring-border hover:ring-primary/50"
-                } ${needsBackground ? "bg-card" : ""}`}
+                } ${needsWhiteBackground ? "bg-white" : needsBackground ? "bg-card" : ""}`}
               >
                 <img
                   src={avatar}
